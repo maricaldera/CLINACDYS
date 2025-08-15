@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - CLINACDYS</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Variables CSS de contáctanos */
+    :root {
+      --primary-blue: #005AA7;
+      --secondary-blue: #00BAE8;
+      --accent-blue: #007BFF;
+      --light-blue: #E3F2FD;
+      --dark-blue: #003D7A;
+      --success-green: #4CAF50;
+      --warning-orange: #FF9800;
+      --danger-red: #F44336;
+      --text-dark: #2C3E50;
+      --text-light: #7F8C8D;
+      --white: #FFFFFF;
+      --gray-50: #F8F9FA;
+      --gray-100: #F1F3F4;
+      --gray-200: #E8EAED;
+      --gray-300: #DADCE0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+      --shadow-xl: 0 20px 40px rgba(0,0,0,0.1);
+      --shadow-2xl: 0 25px 50px rgba(0,0,0,0.15);
+      --border-radius: 12px;
+      --border-radius-lg: 16px;
+      --border-radius-xl: 20px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-fast: all 0.15s ease;
+      --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Banner mejorado */
+    .banner {
+      background: linear-gradient(-45deg, var(--primary-blue), var(--secondary-blue), var(--accent-blue), var(--dark-blue));
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      color: var(--white);
+      padding: 2rem 0 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .banner > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner__breadcrumbs {
+      color: var(--light-blue);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .banner__title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--white);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease-out 0.3s both;
+      background: linear-gradient(45deg, #fff, #f0f8ff, #fff);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 3s ease infinite, fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .banner__bg {
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-2xl);
+      transition: var(--transition-slow);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .banner__bg:hover {
+      transform: scale(1.02);
+    }
+
+    /* About Main Block mejorado */
+    .about-main {
+      background: linear-gradient(135deg, var(--gray-50) 0%, #f0f8ff 50%, var(--gray-50) 100%);
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .about-main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, rgba(0,186,232,0.1));
+    }
+
+    .about-main__container {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      padding: 0 2rem;
+    }
+
+    .about-main__image img {
+      width: 350px;
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-2xl);
+      transition: var(--transition-slow);
+    }
+
+    .about-main__image img:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+
+    .about-main__content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-main__subtitle {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .about-main__title {
+      color: var(--primary-blue);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 10px rgba(0,90,167,0.1);
+    }
+
+    .about-main__features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-main__features li {
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      border-top: 4px solid var(--secondary-blue);
+      transition: var(--transition-slow);
+      color: var(--text-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about-main__features li:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-2xl);
+      border-top-color: var(--accent-blue);
+      background: linear-gradient(135deg, rgba(0, 186, 232, 0.05), rgba(0, 90, 167, 0.05));
+    }
+
+    .about-main__features i {
+      color: var(--success-green);
+    }
+
+    .about-main__desc {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-lg);
+      border-top: 6px solid var(--secondary-blue);
+    }
+
+    /* Sobre la Plataforma mejorado */
+    .aboutweb {
+      background: var(--white);
+      padding: 5rem 0;
+    }
+
+    .aboutweb-content {
+      background: linear-gradient(135deg, var(--gray-50), var(--light-blue));
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-2xl);
+      border-top: 6px solid var(--secondary-blue);
+      transition: var(--transition-slow);
+      max-width: 950px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 3rem;
+      position: relative;
+    }
+
+    .aboutweb-content:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+
+    .aboutweb-visual {
+      flex: 0 0 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .aboutweb-icon {
+      color: var(--primary-blue);
+      font-size: 4rem;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+
+    .aboutweb-text {
+      flex: 1;
+    }
+
+    .aboutweb-text h2 {
+      color: var(--primary-blue);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,90,167,0.1);
+    }
+
+    .aboutweb-desc {
+      color: var(--text-dark);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .aboutweb-desc-small {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .aboutweb-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .aboutweb-benefits li {
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      border-top: 3px solid var(--secondary-blue);
+      transition: var(--transition);
+      color: var(--text-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .aboutweb-benefits li:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-top-color: var(--accent-blue);
+    }
+
+    .aboutweb-benefits i {
+      color: var(--success-green);
+    }
+
+    /* Emergency Transport mejorado */
+    .emergency-transport {
+      background: linear-gradient(135deg, var(--gray-50) 0%, #f0f8ff 50%, var(--gray-50) 100%);
+      padding: 5rem 0;
+    }
+
+    .emergency-transport-content {
+      background: var(--white);
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-2xl);
+      border-top: 6px solid var(--danger-red);
+      transition: var(--transition-slow);
+      animation: pulse 2s ease-in-out infinite;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .emergency-transport-content:hover {
+      animation: none;
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+
+    .emergency-icon {
+      flex: 0 0 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .emergency-icon i {
+      font-size: 4rem;
+      color: var(--danger-red);
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+
+    .emergency-text {
+      flex: 1;
+    }
+
+    .emergency-text h2 {
+      color: var(--primary-blue);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,90,167,0.1);
+    }
+
+    .emergency-text p {
+      color: var(--text-dark);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .emergency-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .emergency-benefits li {
+      background: linear-gradient(135deg, rgba(244, 67, 54, 0.1), rgba(220, 53, 69, 0.1));
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius-lg);
+      border-top: 3px solid var(--danger-red);
+      transition: var(--transition);
+      color: var(--text-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .emergency-benefits li:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .emergency-benefits i {
+      color: var(--danger-red);
+    }
+
+    /* News Section mejorado */
+    .about-news {
+      background: var(--white);
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title span {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .section-title h2 {
+      color: var(--primary-blue);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-top: 0.5rem;
+      text-shadow: 0 2px 10px rgba(0,90,167,0.1);
+    }
+
+    .about-news__carousel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .news-card {
+      background: var(--white);
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-lg);
+      border-top: 5px solid var(--secondary-blue);
+      transition: var(--transition-slow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 186, 232, 0.05), rgba(0, 90, 167, 0.05));
+      opacity: 0;
+      transition: var(--transition-slow);
+    }
+
+    .news-card:hover::before {
+      opacity: 1;
+    }
+
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+      border-top-color: var(--accent-blue);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: var(--transition-slow);
+    }
+
+    .news-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .news-card__info {
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .news-card__meta {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .news-card__title {
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .news-card__stats {
+      display: flex;
+      gap: 1rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .news-card__stats i {
+      color: var(--secondary-blue);
+      margin-right: 0.25rem;
+    }
+
+    /* Contact Section mejorado */
+    .about-contact {
+      background: linear-gradient(135deg, var(--gray-50) 0%, #f0f8ff 50%, var(--gray-50) 100%);
+      padding: 5rem 0;
+    }
+
+    .about-contact__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: var(--shadow-lg);
+      border-top: 5px solid var(--secondary-blue);
+      transition: var(--transition-slow);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 186, 232, 0.05), rgba(0, 90, 167, 0.05));
+      opacity: 0;
+      transition: var(--transition-slow);
+    }
+
+    .contact-card:hover::before {
+      opacity: 1;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+      border-top-color: var(--accent-blue);
+    }
+
+    .contact-card i {
+      font-size: 3rem;
+      color: var(--primary-blue);
+      margin-bottom: 1.5rem;
+      display: block;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+
+    .contact-card--highlight {
+      border-top-color: var(--danger-red);
+    }
+
+    .contact-card--highlight i {
+      color: var(--danger-red);
+    }
+
+    .contact-card__title {
+      color: var(--primary-blue);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-card__desc {
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner__title {
+        font-size: 2.5rem;
+      }
+      
+      .about-main__container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .aboutweb-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .emergency-transport-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .about-news__carousel {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-contact__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Top Info -->
+  <div class="header-top">
+    <div class="container">
+      <span>EMERGENCIAS: 314-783-6714</span>
+      <span>Horario de trabajo: 24/7 </span>
+      <span>UBICACION: Valle de Aburrá, Medellín, Colombia</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">CLINACDYS</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./transporte.html">Transporte</a></li>
+          <li><a href="contactenos.html">Contactanos</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn-appointment" onclick="showLoginModal()">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner__breadcrumbs">Inicio / Nosotros</div>
+    <h1 class="banner__title">Sobre Nosotros</h1>
+    <img class="banner__bg" src="./assets/image/IMG_9295 (1).jpg" alt="Banner" />
+  </section>
+
+  <!-- About Main Block -->
+  <section class="about-main">
+    <div class="about-main__container">
+      <div class="about-main__image">
+        <img src="./assets/image/IMG_9285.jpeg" alt="Equipo médico" />
+      </div>
+      <div class="about-main__content">
+        <div class="about-main__subtitle">Bienvenido a Clinacdys</div>
+        <h2 class="about-main__title">El mejor cuidado para tu
+            buena salud</h2>
+        <ul class="about-main__features">
+          <li><i class="fa-solid fa-circle-check"></i> Pasión por sanar</li>
+          <li><i class="fa-solid fa-circle-check"></i> Damos lo mejor</li>
+          <li><i class="fa-solid fa-circle-check"></i> Siempre cuidando</li>
+          <li><i class="fa-solid fa-circle-check"></i> Atencion 5 estrellas</li>
+          <li><i class="fa-solid fa-circle-check"></i> Confia en nosotros</li>
+          <li><i class="fa-solid fa-circle-check"></i> Legado de excelencia</li>
+        </ul>
+        <p class="about-main__desc">Imagina tener todo tu mundo de salud en la palma de tu mano: tu historial clínico completo, tus medicamentos organizados, alertas inteligentes, citas médicas al instante y, en caso de emergencia, acceso inmediato a ambulancias cercanas con solo un clic. Nuestra plataforma no es solo una herramienta, es tu asistente personal de salud, diseñada para anticiparse a tus necesidades, conectar con tus médicos y ayudarte a tomar decisiones vitales en el momento justo. Porque tu salud no puede esperar, y ahora tú tampoco tienes que hacerlo.</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre la Plataforma -->
+  <section class="aboutweb">
+    <div class="aboutweb-content">
+      <div class="aboutweb-visual">
+        <i class="fa-solid fa-heart aboutweb-icon"></i>
+      </div>
+      <div class="aboutweb-text">
+        <h2>Sobre la Plataforma</h2>
+        <p class="aboutweb-desc">Somos una plataforma integral de servicios médicos que conecta pacientes con profesionales de la salud de alta calidad. Nuestra misión es facilitar el acceso a la atención médica de manera eficiente, segura y personalizada.</p>
+        <p class="aboutweb-desc-small">A través de nuestra plataforma, los pacientes pueden programar citas, consultar historiales médicos, recibir recordatorios de medicamentos y acceder a información médica confiable las 24 horas del día.</p>
+        <ul class="aboutweb-benefits">
+          <li><i class="fa-solid fa-check"></i> Atención personalizada</li>
+          <li><i class="fa-solid fa-check"></i> Seguridad de datos</li>
+          <li><i class="fa-solid fa-check"></i> Disponibilidad 24/7</li>
+          <li><i class="fa-solid fa-check"></i> Profesionales certificados</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transporte -->
+  <section class="emergency-transport">
+    <div class="emergency-transport-content">
+      <div class="emergency-icon">
+        <i class="fa-solid fa-ambulance"></i>
+      </div>
+      <div class="emergency-text">
+        <h2>Servicio de Transporte Médico</h2>
+        <p>Contamos con una flota de ambulancias equipadas con tecnología de vanguardia y personal médico especializado para emergencias. Nuestro servicio de transporte médico está disponible las 24 horas del día, los 7 días de la semana.</p>
+        <ul class="emergency-benefits">
+          <li><i class="fa-solid fa-clock"></i> Respuesta inmediata</li>
+          <li><i class="fa-solid fa-shield-alt"></i> Equipamiento avanzado</li>
+          <li><i class="fa-solid fa-user-md"></i> Personal especializado</li>
+          <li><i class="fa-solid fa-phone"></i> Coordinación centralizada</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="about-news">
+    <div class="section-title">
+      <span> MEJOR INFORMACIÓN, MEJOR SALUD </span>
+      <h2>Te podría interesar</h2>
+    </div>
+    <div class="about-news__carousel">
+      <div class="news-card">
+        <img src="./assets/image/IMG_9288.jpg" alt="News 1">
+        <div class="news-card__info">
+          <div class="news-card__meta">Lunes 05, Septiembre 2025 |</div>
+          <div class="news-card__title">Sabías que… caminar 30 minutos al día puede reducir el riesgo de enfermedades cardíacas hasta en un 30%?
+
+No necesitas un gimnasio: dar paseos diarios ya es un gran paso para tu salud.</div>
+          <div class="news-card__stats">
+            <span><i class="fa-regular fa-eye"></i> 68</span>
+            <span><i class="fa-regular fa-heart"></i> 54</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/image/IMG_9289.JPG" alt="News 2">
+        <div class="news-card__info">
+          <div class="news-card__meta">Lunes 11 Agosto 2025| </div>
+          <div class="news-card__title">La risa como medicina:
+Reír fortalece tu sistema inmune y disminuye el estrés.</div>
+          <div class="news-card__stats">
+            <span><i class="fa-regular fa-eye"></i> 120</span>
+            <span><i class="fa-regular fa-heart"></i> 86</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/image/IMG_9290.JPG" alt="News 3">
+        <div class="news-card__info">
+          <div class="news-card__meta">Lunes 18, Agosto 2025 | </div>
+          <div class="news-card__title">Aliméntate con colores.
+Llena tu plato de frutas y verduras de distintos tonos; cada color aporta vitaminas y minerales distintos que tu cuerpo necesita.</div>
+          <div class="news-card__stats">
+            <span><i class="fa-regular fa-eye"></i> 100</span>
+            <span><i class="fa-regular fa-heart"></i> 53</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="about-contact">
+    <div class="section-title">
+      <span></span>
+      <h2>Contacto</h2>
+    </div>
+    <div class="about-contact__grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-phone"></i>
+        <div class="contact-card__title">EMERGENCIA</div>
+        <div class="contact-card__desc"> 314-783-6714<br> 321-553-5993</div>
+      </div>
+      <div class="contact-card contact-card--highlight">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="contact-card__title">LOCACIÓN</div>
+        <div class="contact-card__desc">Medellín<br>Colombia</div>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="contact-card__title">EMAIL</div>
+        <div class="contact-card__desc">clinacdys01@gmail.com<br>nacdysweb@gmail.com</div>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-clock"></i>
+        <div class="contact-card__title">TIEMPO DE HORARIO</div>
+        <div class="contact-card__desc">Lun-Dom:24/7<br>Emergencias todos los días</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-info">
+        <h3>CLINACDYS</h3>
+        <p>Tu salud a un click.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="contactenos.html">Contactanos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="transporte.html">Transporte</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contactanos</h4>
+        <p>Telefono: 314-783-6714</p>
+        <p>Email: clinacdys01@gmail.com</p>
+        <p>Ubicacion Valle de Aburrá, Medellín, Colombia</p>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Noticiario</h4>
+        <form>
+          <input type="email" placeholder="Correo electrónico" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 clinacdys con derechos reservados a Nacdysweb</p>
+    </div>
+  </footer>
+
+  <!-- CSS para modales -->
+  <link rel="stylesheet" href="./assets/css/modals.css">
+  
+  <!-- JavaScript para modales -->
+  <script src="./assets/js/modals.js"></script>
+</body>
+</html>

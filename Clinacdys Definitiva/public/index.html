@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLINACDYS</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    /* Solo cambio de colores - mantener diseño original */
+    :root {
+      --primary-blue: #005AA7;
+      --secondary-blue: #00BAE8;
+      --accent-blue: #007BFF;
+      --light-blue: #E3F2FD;
+      --dark-blue: #003D7A;
+    }
+
+    /* Aplicar solo los colores azules de contáctanos */
+    .header-top {
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    }
+
+    .main-header .logo {
+      color: var(--primary-blue);
+    }
+
+    .main-header nav a:hover {
+      color: var(--primary-blue);
+      background: var(--light-blue);
+    }
+
+    .btn-appointment {
+      background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    }
+
+    .btn-appointment:hover {
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    }
+
+    .hero {
+      background: linear-gradient(135deg, 
+        rgba(0, 90, 167, 0.4), 
+        rgba(0, 186, 232, 0.3));
+    }
+
+    .hero h2 {
+      color: var(--white);
+    }
+
+    .hero-appointments .btn {
+      background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    }
+
+    .hero-appointments .btn:hover {
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    }
+
+    .appointment {
+      background: var(--light-blue);
+    }
+
+    .appointment h2 {
+      color: var(--primary-blue);
+    }
+
+    .appointment button {
+      background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    }
+
+    .appointment button:hover {
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    }
+
+    .services h2 {
+      color: var(--primary-blue);
+    }
+
+    .services-list li {
+      border-top: 4px solid var(--secondary-blue);
+    }
+
+    .services-list li:hover {
+      border-top-color: var(--accent-blue);
+    }
+
+    .service-content {
+      background: var(--light-blue);
+      border-top: 6px solid var(--secondary-blue);
+    }
+
+    .service-content h3 {
+      color: var(--primary-blue);
+    }
+
+    .specialities h2 {
+      color: var(--primary-blue);
+    }
+
+    .specialties-grid > div {
+      border-top: 5px solid var(--secondary-blue);
+    }
+
+    .specialties-grid > div:hover {
+      border-top-color: var(--accent-blue);
+    }
+
+    .clinics h2 {
+      color: var(--primary-blue);
+    }
+
+    .clinic-card {
+      border-top: 5px solid var(--secondary-blue);
+    }
+
+    .clinic-card:hover {
+      border-top-color: var(--accent-blue);
+    }
+
+    .clinic-card h3 {
+      color: var(--primary-blue);
+    }
+
+    .news h2 {
+      color: var(--primary-blue);
+    }
+
+    .news-card {
+      border-top: 5px solid var(--secondary-blue);
+    }
+
+    .news-card:hover {
+      border-top-color: var(--accent-blue);
+    }
+
+    .news-card h3 {
+      color: var(--primary-blue);
+    }
+
+    .read-more {
+      background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    }
+
+    .read-more:hover {
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    }
+
+    .contact h2 {
+      color: var(--primary-blue);
+    }
+
+    .contact-grid > div {
+      border-top: 5px solid var(--secondary-blue);
+    }
+
+    .contact-grid > div:hover {
+      border-top-color: var(--accent-blue);
+    }
+
+    .contact-grid h3 {
+      color: var(--primary-blue);
+    }
+
+    .site-footer {
+      background: var(--dark-blue);
+    }
+
+    .footer-info h3 {
+      color: var(--secondary-blue);
+    }
+
+    .footer-info p {
+      color: var(--light-blue);
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-newsletter h4 {
+      color: var(--secondary-blue);
+    }
+
+    .footer-links a {
+      color: var(--light-blue);
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-blue);
+    }
+
+    .footer-contact p {
+      color: var(--light-blue);
+    }
+
+    .footer-newsletter button {
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    }
+
+    .footer-bottom {
+      background: var(--primary-blue);
+      color: var(--light-blue);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Top Info -->
+  <div class="header-top">
+    <div class="container">
+      <span>EMERGENCIAS: 314-783-6714</span>
+      <span>Horario de trabajo: 24/7 </span>
+      <span>UBICACION: Valle de Aburrá, Medellín, Colombia</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">CLINACDYS</h1>
+      <nav>
+        <ul>
+                    <li><a href="index.html">Inicio</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./transporte.html">Transporte</a></li>
+          <li><a href="contactenos.html">Contactanos</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn-appointment" onclick="showLoginModal()">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Carrusel de imágenes de fondo -->
+    <div class="hero-background">
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+    </div>
+    
+    <!-- Indicadores del carrusel -->
+    <div class="hero-indicators">
+      <div class="hero-indicator active"></div>
+      <div class="hero-indicator"></div>
+      <div class="hero-indicator"></div>
+      <div class="hero-indicator"></div>
+    </div>
+    
+    <div class="container">
+      <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+        <h2>TU SALUD A UN CLICK</h2>
+       <div class="hero-appointments">
+          <a href="#" class="btn">Agendar Cita</a>
+          <a href="#" class="btn">Medicamentos</a>
+          <a href="#" class="btn">Historial Clinico</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Form Section -->
+  <section class="appointment">
+    <div class="container">
+      <h2>Agenda tu Cita</h2>
+      <p>Reserva tu consulta médica de forma rápida y segura</p>
+      <form>
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <select required>
+          <option value="">Selecciona especialidad</option>
+          <option value="general">Medicina General</option>
+          <option value="General">Medicina General</option>
+          <option value="General">Medicina General</option>
+          <option value="General">Medicina General</option>
+        </select>
+        <input type="date" required>
+        <textarea placeholder="Describe tus síntomas (opcional)" rows="3"></textarea>
+        <button type="submit">Agendar Cita</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-list">
+        <ul>
+          <li>Transporte</li>
+          <li>Agendacion de Citas</li>
+          <li>Consultas</li>
+          <li>Medicamento</li>
+        </ul>
+        <div class="service-content">
+          <h3>Nuestros Servicios Médicos</h3>
+          <ul>
+            <li>Consultas médicas</li>
+            
+           
+            <li>Emergencias 24/7</li>
+            <li>Medicamentos recetados</li>
+          </ul>
+          <p>Ofrecemos atención médica integral con tecnología de vanguardia y personal altamente calificado para cuidar de tu salud y la de tu familia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Specialties -->
+  <section class="specialities">
+    <div class="container">
+      <h2>Especialidades</h2>
+      <div class="specialties-grid">
+        <div>Medicina General</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clínicas Convenio -->
+  <section class="clinics">
+    <div class="container">
+      <h2>Clínicas Convenio</h2>
+      <div class="clinics-grid">
+        <div class="clinic-card">
+          <div class="clinic-avatar">🏥</div>
+          <h3>Hospital Pablo Tobón Uribe</h3>
+          <p>Centro Médico de Alta Complejidad</p>
+          <p>Especialidades: Cardiología, Neurología, Traumatología</p>
+        </div>
+        <div class="clinic-card">
+          <div class="clinic-avatar">🏥</div>
+          <h3>Clínica Las Vegas</h3>
+          <p>Centro Médico Especializado</p>
+          <p>Especialidades: Emergencias, Cirugía, Pediatría</p>
+        </div>
+        <div class="clinic-card">
+          <div class="clinic-avatar">🏥</div>
+          <h3>Clínica de Envigado</h3>
+          <p>Centro Médico Municipal</p>
+          <p>Especialidades: Medicina General, Pediatría, Ginecología</p>
+        </div>
+        <div class="clinic-card">
+          <div class="clinic-avatar">🏥</div>
+          <h3>Hospital más cercano</h3>
+          <p>Red de Hospitales Asociados</p>
+          <p>Especialidades: Emergencias, Atención Primaria</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news">
+    <div class="container">
+      <h2>Noticias de Salud</h2>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-image">📰</div>
+          <h3>Prevención del COVID-19</h3>
+          <p>Consejos importantes para mantener tu salud durante la pandemia.</p>
+          <a href="#" class="read-more">Leer más</a>
+        </article>
+        <article class="news-card">
+          <div class="news-image">💉</div>
+          <h3>Vacunación Infantil</h3>
+          <p>Calendario actualizado de vacunas para niños y adolescentes.</p>
+          <a href="#" class="read-more">Leer más</a>
+        </article>
+        <article class="news-card">
+          <div class="news-image">❤️</div>
+          <h3>Salud Cardiovascular</h3>
+          <p>Tips para mantener un corazón saludable y prevenir enfermedades.</p>
+          <a href="#" class="read-more">Leer más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h2>Contactanos</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Emergencias</h3>
+          <p> 314-783-6714<br/>321-553-5993</p>
+        </div>
+        <div>
+          <h3>Ubicacion</h3>
+          <p>Valle de Aburrá<br/>Medellín, Colombia</p>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p>clinacdys01@gmail.com<br/>clinacdysalud@gmail.com</p>
+        </div>
+        <div>
+          <h3>Horario de trabajo</h3>
+          <p>Todos los días: 24/7<br/></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-info">
+        <h3>CLINACDYS</h3>
+        <p>Tu salud a un click.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="contactenos.html">Contactanos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="transporte.html">Transporte</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contactanos</h4>
+        <p>Telefono: 314-783-6714</p>
+        <p>Email: clinacdys01@gmail.com</p>
+        <p>Ubicacion Valle de Aburrá, Medellín, Colombia</p>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Noticiario</h4>
+        <form>
+          <input type="email" placeholder="Correo electrónico" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 clinacdys con derechos reservados a Nacdysweb</p>
+    </div>
+  </footer>
+  <!-- CSS para modales -->
+  <link rel="stylesheet" href="./assets/css/modals.css">
+  
+  <script>
+    // Carrusel de imágenes de fondo
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroIndicators = document.querySelectorAll('.hero-indicator');
+    let currentSlide = 0;
+    
+    function nextSlide() {
+      // Remover clase active de la slide actual
+      heroSlides[currentSlide].classList.remove('active');
+      heroIndicators[currentSlide].classList.remove('active');
+      
+      // Avanzar al siguiente slide
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      
+      // Activar el nuevo slide
+      heroSlides[currentSlide].classList.add('active');
+      heroIndicators[currentSlide].classList.add('active');
+    }
+    
+    function goToSlide(index) {
+      // Remover clase active de la slide actual
+      heroSlides[currentSlide].classList.remove('active');
+      heroIndicators[currentSlide].classList.remove('active');
+      
+      // Ir al slide seleccionado
+      currentSlide = index;
+      
+      // Activar el nuevo slide
+      heroSlides[currentSlide].classList.add('active');
+      heroIndicators[currentSlide].classList.add('active');
+    }
+    
+    // Agregar event listeners a los indicadores
+    heroIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Cambiar imagen de fondo cada 4 segundos
+    setInterval(nextSlide, 4000);
+    
+    // Carrusel de imagen principal (mantenido)
+    // const images = [
+    //   'img/doctor-illustration.png',
+    //   'img/nurse-illustration.png',
+    //   'img/hospital-illustration.png'
+    // ];
+    // let current = 0;
+    // const heroImg = document.getElementById('hero-img');
+    // setInterval(() => {
+    //   current = (current + 1) % images.length;
+    //   heroImg.src = images[current];
+    // }, 3000);
+  </script>
+  
+  <!-- JavaScript para modales -->
+  <script src="./assets/js/modals.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Fuente y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2e86de, #48c9b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #2e86de;
+    margin-bottom: 20px;
+}
+
+/* Grupo de inputs */
+.input-grupo {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Campos de texto */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #2e86de;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    background: #2e86de;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background: #1b4f72;
+}
+
+/* Iconos dentro de las etiquetas */
+label i {
+    margin-right: 6px;
+    color: #2e86de;
+}
+
+

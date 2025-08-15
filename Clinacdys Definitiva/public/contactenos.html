@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - Clinacdys</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/contactenos.css">
+</head>
+
+<body>
+  <!-- Header Top -->
+  <div class="header-top">
+    <div class="container">
+      <span> EMERGENCIAS: 314-783-6714</span>
+      <span> Horario de trabajo: 24/7</span>
+      <span>UBICACION:Valle de Aburrá, Medellín, Colombia</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">CLINACDYS</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./transporte.html">Transporte</a></li>
+          <li><a href="contactenos.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn-appointment" onclick="showLoginModal()">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros para cualquier consulta o emergencia.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Contact Information Section -->
+      <section class="contact-info-section">
+        <div class="section-header">
+          <h3>Información de Contacto</h3>
+          <p>Mantente conectado con nuestro equipo médico</p>
+        </div>
+        
+        <div class="info-cards-grid">
+          <div class="info-card emergency">
+            <div class="card-icon"></div>
+            <div class="card-content">
+              <h4>Emergencias</h4>
+              <p class="phone"> 314-783-6714</p>
+              <p class="phone">321-553-5993</p>
+              <span class="status">24/7 Disponible</span>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-icon">📍</div>
+            <div class="card-content">
+              <h4>Ubicación</h4>
+              <p>Valle de Aburrá</p>
+              <p>Medellín, Colombia</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-icon">✉️</div>
+            <div class="card-content">
+              <h4>Email</h4>
+              <p>clinacdys01@gmail.com</p>
+              <p>nacdysweb@gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-icon">🕒</div>
+            <div class="card-content">
+              <h4>Horario Laboral</h4>
+              <p>Todos los días </p>
+              <span class="status"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Map Section -->
+      <section class="contact-form-map-section">
+        <div class="form-map-grid">
+          
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <div class="contact-form">
+              <div class="form-header">
+                <h3>Envíanos un Mensaje</h3>
+                <p>Completa el formulario y te responderemos pronto</p>
+              </div>
+              
+              <form class="contact-form-element">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="localidad">Localidad</label>
+                  <input type="text" id="localidad" name="localidad" placeholder="Tu localidad" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                  </svg>
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div class="map-container">
+            <div class="map-header">
+              <h3>Nuestra Ubicación</h3>
+              <p>Encuéntranos fácilmente en el Valle de Aburrá</p>
+            </div>
+            
+            <div class="map-wrapper">
+              <iframe src="https://maps.google.com/maps?q=Valle+de+Aburra,+Medellin,+Colombia&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+            
+            <div class="map-info">
+              <div class="info-item">
+                <strong>📍 Dirección:</strong>
+                <span>Valle de Aburrá, Medellín, Colombia</span>
+              </div>
+              <div class="info-item">
+                <strong>🕒 Horario:</strong>
+                <span>Todos los días</span>
+              </div>
+              <div class="info-item">
+                <strong>🚨 Emergencias:</strong>
+                <span>Disponibles 24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Services Section -->
+      <section class="additional-services">
+        <div class="section-header">
+          <h3>Servicios Adicionales</h3>
+          <p>Conoce más sobre cómo podemos ayudarte</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">🏥</div>
+            <h4>Consulta Médica</h4>
+            <p>Agenda tu cita con nuestros especialistas</p>
+          </div>
+          
+          <div class="service-item">
+            <div class="service-icon">💊</div>
+            <h4>Farmacia</h4>
+            <p>Medicamentos y productos farmacéuticos</p>
+          </div>
+          
+          <div class="service-item">
+            <div class="service-icon">🚑</div>
+            <h4>Ambulancia</h4>
+            <p>Servicio de transporte médico de emergencia</p>
+          </div>
+          
+          <div class="service-item">
+            <div class="service-icon">📋</div>
+            <h4>Exámenes</h4>
+            <p>Laboratorio clínico y diagnóstico</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo">CLINACDYS</div>
+        <div class="footer__desc">Tu salud a un solo click.</div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__links-title">Links importantes</div>
+        <ul>
+          <li><a href="#">Citas</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="transporte.html">Transporte</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <div class="footer__links-title">Contactanos</div>
+        <div>Llamadas: 314-783-6714</div>
+        <div>Email: clinacdys01@gmail.com</div>
+      </div>
+      <div class="footer__newsletter">
+        <div class="footer__links-title">Noticiario</div>
+        <form class="footer__newsletter-form">
+          <input type="email" placeholder="Enter your email address">
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2025  clinacdys con derechos reservados a Nacdysweb</div>
+      <div class="footer__social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CSS para modales -->
+  <link rel="stylesheet" href="./assets/css/modals.css">
+  
+  <!-- JavaScript para modales -->
+  <script src="./assets/js/modals.js"></script>
+  
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Salud | Inicio de sesión</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">»</span>
+        <span class="brand-name">Salud Gestión</span>
+      </div>
+      <nav class="header-actions" aria-label="acciones">
+        <a class="header-link" href="#">Soporte</a>
+        <a class="header-link" href="#">Ayuda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <form id="loginForm" novalidate>
+      <div class="form-header">
+        <div class="logo-container">
+          <div class="clinacdys-logo">
+            <svg class="logo-svg" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+              <!-- Medical Cross - Horizontal bar (vibrant medium blue) -->
+              <rect x="8" y="20" width="32" height="10" rx="5" fill="#3b82f6"/>
+              
+              <!-- Medical Cross - Vertical bar (lighter cyan blue) -->
+              <rect x="19" y="10" width="10" height="30" rx="5" fill="#60a5fa"/>
+              
+              <!-- Stethoscope - Main curve starting from upper left -->
+              <path d="M 6 18 Q 0 24 6 30 Q 12 36 18 30" 
+                    stroke="#93c5fd" 
+                    stroke-width="4" 
+                    fill="none" 
+                    stroke-linecap="round"/>
+              
+              <!-- Stethoscope - Earpiece outer circle -->
+              <circle cx="20" cy="30" r="5" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
+              
+              <!-- Stethoscope - Earpiece inner circle -->
+              <circle cx="20" cy="30" r="2.5" fill="#93c5fd"/>
+            </svg>
+            <span class="logo-text">clinacdys</span>
+          </div>
+        </div>
+        <h1 class="form-title">Inicia sesión</h1>
+        <p class="form-subtitle">Accede con tu correo institucional y contraseña</p>
+      </div>
+
+      <div class="form-group">
+        <label for="id">Correo institucional o ID</label>
+        <input 
+          id="id" 
+          name="id" 
+          type="email" 
+          placeholder="tu.correo@salud.gov" 
+          required
+          autocomplete="email"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input 
+          id="password" 
+          name="password" 
+          type="password" 
+          minlength="8" 
+          placeholder="••••••••" 
+          required
+          autocomplete="current-password"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="role">Rol de usuario</label>
+        <select id="role" name="role" required>
+          <option value="">Selecciona tu rol</option>
+          <option value="Paciente">Paciente</option>
+          <option value="Profesional">Profesional de la salud</option>
+          <option value="Administrativo">Personal administrativo</option>
+        </select>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label for="remember" class="checkbox-label">
+          <input type="checkbox" id="remember" name="remember">
+          <span class="checkmark"></span>
+          Mantener sesión activa
+        </label>
+      </div>
+
+      <button id="submitBtn" type="submit">
+        <span class="button-text">Ingresar</span>
+        <span class="button-icon">→</span>
+      </button>
+
+      <div class="form-footer">
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
